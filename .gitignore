@@ -1,0 +1,28 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+*.mat
+octave-workspace
+
+# Simulink (os .slx são gerados pelos scripts em simulacao/modelos)
+simulacao/modelos/*.slx
+slprj/
+*.slxc
+*.autosave
+*.slx.r20*
+*.mdl.r20*
+sccprj/
+codegen/
+
+# PlatformIO
+.pio/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db

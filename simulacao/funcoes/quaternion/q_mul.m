@@ -1,0 +1,9 @@
+function q = q_mul(a, b)
+%Q_MUL Produto de Hamilton a*b. Espelha qMul() do firmware (include/quat.h).
+%   a, b: quaternions [w x y z], linhas de matrizes Nx4 (ou um deles 1x4).
+%   Compatível com blocos MATLAB Function do Simulink.
+q = [a(:,1).*b(:,1) - a(:,2).*b(:,2) - a(:,3).*b(:,3) - a(:,4).*b(:,4), ...
+     a(:,1).*b(:,2) + a(:,2).*b(:,1) + a(:,3).*b(:,4) - a(:,4).*b(:,3), ...
+     a(:,1).*b(:,3) - a(:,2).*b(:,4) + a(:,3).*b(:,1) + a(:,4).*b(:,2), ...
+     a(:,1).*b(:,4) + a(:,2).*b(:,3) - a(:,3).*b(:,2) + a(:,4).*b(:,1)];
+end
